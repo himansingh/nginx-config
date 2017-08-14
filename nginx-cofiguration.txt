@@ -35,22 +35,23 @@ http {
     server {
         listen       80;
         server_name  localhost;
-	root "E:/Himanshu/assignments/Advance-angular-assignment/Assignment5-without-custom-filter/Assignment" ;
-	index  index.html;
 
         #charset koi8-r;
 
         #access_log  logs/host.access.log  main;
 
-        #location / {
+        location / {
                 
-       # }
+		root "E:/Himanshu/assignments/Advance-angular-assignment/Assignment5-with-custom-filter/Assignment" ;
+		index  index.html;
+
+       }
 
 	# redirecting 404 error page to the static page /custom404.html
         
 	error_page  404              /custom404.html;
 	location /custom404.html{
-		root "E:/Himanshu/assignments/Advance-angular-assignment/Assignment5-without-custom-filter/Assignment" ;
+		root "E:/Himanshu/assignments/Advance-angular-assignment/Assignment5-with-custom-filter/Assignment" ;
 		index  custom404.html; 
 	}
 
@@ -58,7 +59,7 @@ http {
         #
         error_page   500 502 503 504  /custom500.html;
         location  /custom500.html {
-            	root "E:/Himanshu/assignments/Advance-angular-assignment/Assignment5-without-custom-filter/Assignment" ;
+            	root "E:/Himanshu/assignments/Advance-angular-assignment/Assignment5-with-custom-filter/Assignment" ;
 		index  custom500.html; 
         }
 
